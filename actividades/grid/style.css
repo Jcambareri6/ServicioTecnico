@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 80px  300px auto 80px ;
+    grid-template-areas: "navBar navBar  navBar navBar"
+                        "header header  header  header"
+                        "main   main    main    aside"
+                        "footer footer  footer  footer";
+}
+.navBar{
+    grid-area:navBar ;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.navBar ul{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}   
+.navBar ul li{
+    padding: 10px;
+    margin: 10px;
+    
+}
+.navBar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+}
+.header1{
+    grid-area:header ;
+    background-image: url(./fondo.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.tarjeta{
+    padding: 10px;
+    margin: 10px;
+}
+.btn{
+    width: 100px;
+    background-color: blue;
+    border: 0;
+    padding: 10px;
+    margin: 10px;
+}
+.main{
+    grid-area:main ;
+    background-color: blueviolet;
+}
+.sideBar{
+    grid-area:aside ;
+    background-color: rosybrown;
+}
+.footer{
+    grid-area:footer ;
+    background-color: darkseagreen;
+}
